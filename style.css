@@ -721,3 +721,50 @@ img, .avatar-img {
 }
 
 /* --- FIN OPTIMISATION RESPONSIVE --- */ 
+
+/* --- AJUSTEMENTS MOBILE : ZOOM OUT & NAVBAR FIX --- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: rgba(24,28,42,0.98);
+    box-shadow: 0 2px 12px #181c2a99;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: auto;
+  }
+  .navbar-logo {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .hero-section {
+    margin-top: 60px; /* Compense la navbar fixed */
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    background: rgba(24,28,42,0.98);
+    box-shadow: 0 2px 12px #181c2a99;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+  }
+  .hero-section {
+    margin-top: 70px;
+  }
+}
+
+/* --- FIN AJUSTEMENTS MOBILE --- */ 
