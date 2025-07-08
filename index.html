@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheygo - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">sheygo</div>
+    <ul class="navbar-links">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-left" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="./avatar-foot.png" alt="Avatar Sheygo" class="avatar-img" />
+        <h1 style="text-align:center;">Bonjour, je suis <span class="hero-name">Sheygo</span></h1>
+        <h2 class="hero-role" style="text-align:center;">Développeur JavaScript, HTML/CSS & Python</h2>
+        <p class="hero-desc" style="text-align:center;">Je crée des outils et expériences digitales qui combinent automatisation, bots Discord, et développement web moderne.</p>
+        <div class="hero-btns" style="justify-content:center;">
+          <a href="#projects" class="btn-main">Voir mes projets</a>
+          <a href="#contact" class="btn-outline">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="code-editor">
+          <div class="code-editor-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span class="code-filename">Developer.js</span>
+          </div>
+          <pre class="code-block"><code>
+<span class="code-purple">class</span> <span class="code-white">Developer</span> &#123;
+  <span class="code-blue">constructor</span>() &#123;
+    <span class="code-grey">this</span>.<span class="code-white">name</span> = <span class="code-yellow">"Sheygo"</span>;
+    <span class="code-grey">this</span>.<span class="code-white">role</span> = <span class="code-yellow">"Full-Stack Developer"</span>;
+    <span class="code-grey">this</span>.<span class="code-white">skills</span> = [
+      <span class="code-yellow">"JavaScript"</span>,
+      <span class="code-yellow">"HTML/CSS"</span>,
+      <span class="code-yellow">"Python"</span>,
+      <span class="code-yellow">"Java"</span>,
+      <span class="code-yellow">"Node.js"</span>
+    ];
+    <span class="code-grey">this</span>.<span class="code-white">passion</span> = <span class="code-yellow">"Créer des outils utiles"</span>;
+  &#125;
+
+  <span class="code-green">createProject</span>(<span class="code-orange">idea</span>) &#123;
+    <span class="code-grey">return</span> <span class="code-orange">idea</span>
+      .<span class="code-cyan">analyze</span>()
+      .<span class="code-cyan">design</span>()
+      .<span class="code-cyan">implement</span>()
+      .<span class="code-cyan">test</span>()
+      .<span class="code-cyan">deploy</span>();
+  &#125;
+&#125;
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="about" class="about-section">
+      <h2>À propos de moi</h2>
+      <p>Développeur passionné par l'automatisation, les bots Discord et le web, j'aime concevoir des outils qui facilitent la vie des utilisateurs et des communautés. J'ai de l'expérience sur Discord, le web scraping, et l'intégration d'APIs variées. Toujours curieux, j'aime apprendre de nouvelles technos et relever des défis !</p>
+    </section>
+    <section id="projects" class="projects-section">
+      <h2>Projets sélectionnés</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Syde</h3>
+          <p>Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.</p>
+          <span class="project-tech">JavaScript (Node.js), discord.js</span>
+          <a href="https://github.com/sheygow" target="_blank" class="project-link">Code</a>
+        </div>
+        <div class="project-card">
+          <h3>Perkify (Plugin Minecraft)</h3>
+          <p>Plugin Minecraft offrant un système d'atouts personnalisable, compatible multi-versions, interface intuitive, optimisé pour serveurs multijoueurs.</p>
+          <span class="project-tech">Java, Spigot/Bukkit API</span>
+          <span class="project-link disabled">Privé</span>
+        </div>
+        <div class="project-card">
+          <h3>NewsGG</h3>
+          <p>Bot multi-plateforme qui agrège et diffuse automatiquement les dernières actualités et promotions de jeux vidéo (Steam, Epic Games, etc.).</p>
+          <span class="project-tech">JavaScript, Node.js, APIs web, Discord</span>
+          <span class="project-link disabled">Privé</span>
+        </div>
+        <div class="project-card">
+          <h3>Thème Vencord</h3>
+          <p>Thème personnalisé pour Discord via Vencord, design moderne, couleurs violettes et sombres, compatible mode nuit.</p>
+          <span class="project-tech">CSS, Vencord</span>
+          <span class="project-link disabled">Privé</span>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills-section">
+      <h2>Compétences</h2>
+      <div class="skills-list">
+        <span>JavaScript</span>
+        <span>HTML/CSS</span>
+        <span>Python</span>
+        <span>Node.js</span>
+        <span>discord.js</span>
+        <span>MongoDB</span>
+        <span>Java</span>
+        <span>Spigot API</span>
+        <span>APIs Web</span>
+        <span>Git</span>
+      </div>
+    </section>
+    <section id="experience" class="experience-section">
+      <h2>Expérience</h2>
+      <div class="experience-list">
+        <div class="experience-card">
+          <h3>Développeur Full Stack (Projet personnel)</h3>
+          <span class="exp-date">2024 - Présent</span>
+          <p>Développement de bots Discord, plugins Minecraft, et outils web pour divers serveurs et communautés.</p>
+        </div>
+        <div class="experience-card">
+          <h3>Freelance - Développement de solutions sur mesure</h3>
+          <span class="exp-date">2023 - Présent</span>
+          <p>Création de bots, automatisations, et intégrations API pour des clients variés (Discord, web, jeux vidéo).</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <span class="contact-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.369A19.791 19.791 0 0 0 16.885 3.3a.074.074 0 0 0-.078.037c-.34.607-.719 1.396-.984 2.013a18.524 18.524 0 0 0-5.666 0 12.51 12.51 0 0 0-.997-2.013.077.077 0 0 0-.078-.037A19.736 19.736 0 0 0 3.684 4.369a.07.07 0 0 0-.032.027C.533 9.09-.32 13.604.099 18.063a.08.08 0 0 0 .031.056c2.128 1.565 4.195 2.51 6.229 3.13a.077.077 0 0 0 .084-.027c.48-.66.908-1.356 1.278-2.084a.076.076 0 0 0-.041-.104c-.676-.256-1.32-.57-1.936-.936a.077.077 0 0 1-.008-.127c.13-.098.26-.2.384-.304a.074.074 0 0 1 .077-.01c4.06 1.855 8.447 1.855 12.47 0a.075.075 0 0 1 .078.009c.124.104.254.206.384.304a.077.077 0 0 1-.007.127 12.298 12.298 0 0 1-1.937.936.076.076 0 0 0-.04.105c.37.727.797 1.423 1.277 2.083a.076.076 0 0 0 .084.028c2.035-.62 4.102-1.565 6.23-3.13a.077.077 0 0 0 .03-.055c.5-5.177-.838-9.653-3.285-13.667a.061.061 0 0 0-.03-.028zM8.02 15.331c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.094 2.156 2.418 0 1.334-.955 2.419-2.156 2.419zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.094 2.156 2.418 0 1.334-.946 2.419-2.156 2.419z" fill="#a084ee"/></svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Discord</span>
+            <span class="contact-value">sheygo</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="#a084ee"/></svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Localisation</span>
+            <span class="contact-value">France</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <span class="contact-social-label">Retrouvez-moi sur</span>
+        <a href="https://github.com/sheygow" target="_blank" title="GitHub" class="icon-link">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2Z" fill="#a084ee"/></svg>
+        </a>
+        <a href="#" title="Discord" class="icon-link" onclick="navigator.clipboard.writeText('sheygo');alert('Pseudo Discord copié !');return false;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.369A19.791 19.791 0 0 0 16.885 3.3a.074.074 0 0 0-.078.037c-.34.607-.719 1.396-.984 2.013a18.524 18.524 0 0 0-5.666 0 12.51 12.51 0 0 0-.997-2.013.077.077 0 0 0-.078-.037A19.736 19.736 0 0 0 3.684 4.369a.07.07 0 0 0-.032.027C.533 9.09-.32 13.604.099 18.063a.08.08 0 0 0 .031.056c2.128 1.565 4.195 2.51 6.229 3.13a.077.077 0 0 0 .084-.027c.48-.66.908-1.356 1.278-2.084a.076.076 0 0 0-.041-.104c-.676-.256-1.32-.57-1.936-.936a.077.077 0 0 1-.008-.127c.13-.098.26-.2.384-.304a.074.074 0 0 1 .077-.01c4.06 1.855 8.447 1.855 12.47 0a.075.075 0 0 1 .078.009c.124.104.254.206.384.304a.077.077 0 0 1-.007.127 12.298 12.298 0 0 1-1.937.936.076.076 0 0 0-.04.105c.37.727.797 1.423 1.277 2.083a.076.076 0 0 0 .084.028c2.035-.62 4.102-1.565 6.23-3.13a.077.077 0 0 0 .03-.055c.5-5.177-.838-9.653-3.285-13.667a.061.061 0 0 0-.03-.028zM8.02 15.331c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.094 2.156 2.418 0 1.334-.955 2.419-2.156 2.419zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.175 1.094 2.156 2.418 0 1.334-.946 2.419-2.156 2.419z" fill="#a084ee"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 
