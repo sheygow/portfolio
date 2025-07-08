@@ -6,6 +6,8 @@
   <title>Sheygo - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="avatar-foot.png">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -69,11 +71,11 @@
     </div>
   </header>
   <main>
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-aos="fade-up">
       <h2>À propos de moi</h2>
       <p>Développeur passionné par l'automatisation, les bots Discord et le web, j'aime concevoir des outils qui facilitent la vie des utilisateurs et des communautés. J'ai de l'expérience sur Discord, le web scraping, et l'intégration d'APIs variées. Toujours curieux, j'aime apprendre de nouvelles technos et relever des défis !</p>
     </section>
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section" data-aos="fade-up">
       <h2>Projets sélectionnés</h2>
       <div class="project-list">
         <div class="project-card" style="position: relative;">
@@ -90,7 +92,7 @@
         <div class="project-card">
           <h3>NewsGG</h3>
           <p>Bot multi-plateforme qui agrège et diffuse automatiquement les dernières actualités et promotions de jeux vidéo (Steam, Epic Games, etc.).</p>
-          <span class="project-tech">JavaScript, Node.js, APIs web, Discord</span>
+          <span class="project-tech">JavaScript, Node.js, APIs web, Discordz</span>
         </div>
         <div class="project-card">
           <h3>Thème Vencord</h3>
@@ -99,7 +101,7 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section" data-aos="fade-up">
       <h2>Compétences</h2>
       <div class="skills-list">
         <span>JavaScript</span>
@@ -107,14 +109,13 @@
         <span>Python</span>
         <span>Node.js</span>
         <span>discord.js</span>
-        <span>MongoDB</span>
         <span>Java</span>
-        <span>Spigot API</span>
+        <span>Spigot</span>
         <span>APIs Web</span>
         <span>Git</span>
       </div>
     </section>
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section" data-aos="fade-up">
       <h2>Expérience</h2>
       <div class="experience-list">
         <div class="experience-card">
@@ -129,7 +130,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" data-aos="fade-up">
       <h2>Contact</h2>
       <div class="contact-cards">
         <div class="contact-card">
@@ -162,5 +163,10 @@
       </div>
     </section>
   </main>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html> 
