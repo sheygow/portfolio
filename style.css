@@ -19,6 +19,7 @@ body {
   top: 0;
   z-index: 10;
   box-shadow: 0 2px 8px #181c2a33;
+  position: relative;
 }
 .navbar-logo {
   font-weight: 700;
@@ -43,6 +44,44 @@ body {
 }
 .navbar-links a:hover {
   color: #a084ee;
+}
+
+/* Sélecteur de langue dans le coin */
+.lang-corner {
+  position: fixed;
+  top: 16px;
+  right: 38px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.lang-corner .lang-icon {
+  font-size: 1.18rem;
+  color: #6cdbff;
+  display: flex;
+  align-items: center;
+}
+#lang-select {
+  background: #232946;
+  color: #e0e1f6;
+  border: 1.5px solid #a084ee;
+  border-radius: 7px;
+  padding: 4px 16px 4px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #6c63ff11;
+  cursor: pointer;
+}
+#lang-select:focus, #lang-select:hover {
+  border: 1.5px solid #6c63ff;
+  box-shadow: 0 0 0 1.5px #a084ee44;
 }
 
 .hero-section {
