@@ -870,3 +870,78 @@ img, .avatar-img {
   }
 }
 /* --- FIN BURGER ICON STYLE --- */ 
+
+/* --- NAVBAR ALIGNEMENT --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 48px;
+  height: auto;
+}
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #a084ee;
+  margin-right: 24px;
+  margin-left: 8px;
+  line-height: 1;
+}
+.navbar-burger {
+  margin-left: auto;
+  margin-right: 8px;
+  align-self: center;
+}
+.lang-corner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  height: 32px;
+}
+#lang-select {
+  font-size: 1rem;
+  padding: 2px 10px 2px 8px;
+  height: 28px;
+}
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 44px;
+    height: auto;
+  }
+  .navbar-logo {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-left: 6px;
+  }
+  .navbar-burger {
+    margin-left: auto;
+    margin-right: 4px;
+    height: 36px;
+    width: 36px;
+  }
+  .lang-corner {
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 28px;
+  }
+  #lang-select {
+    font-size: 0.95rem;
+    height: 22px;
+    padding: 1px 7px 1px 6px;
+  }
+}
+/* --- FIN NAVBAR ALIGNEMENT --- */ 
