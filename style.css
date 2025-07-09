@@ -618,6 +618,42 @@ img, .avatar-img {
 }
 
 @media (max-width: 1024px) {
+  .navbar-links,
+  .navbar-links.open,
+  .navbar-overlay,
+  .navbar-overlay.open,
+  .navbar-burger,
+  .navbar-burger span {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-links {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-links.open {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-overlay {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-overlay.open {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-burger {
+    transition: none !important;
+    animation: none !important;
+  }
+  .navbar-burger span {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
   .navbar {
     padding: 0 12px;
     height: auto;
