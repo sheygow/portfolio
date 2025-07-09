@@ -570,7 +570,6 @@ img, .avatar-img {
   }
   .navbar-links {
     flex-direction: column;
-    gap: 8px;
   }
   .project-list {
     flex-direction: column;
@@ -765,28 +764,43 @@ img, .avatar-img {
 
 /* --- MENU BURGER MOBILE --- */
 
+/* --- BURGER ICON STYLE --- */
 .navbar-burger {
   display: none;
+  background: none;
+  border: none;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: 8px;
+  cursor: pointer;
+  z-index: 1201;
+  height: 44px;
+  width: 44px;
+  align-items: center;
+  justify-content: center;
 }
-
+.navbar-burger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 5px auto;
+  background: #a084ee;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
 @media (max-width: 800px) {
   .navbar-burger {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: none;
-    border: none;
-    color: #a084ee;
-    font-size: 2.1rem;
-    margin-left: auto;
-    margin-right: 8px;
-    cursor: pointer;
-    z-index: 1101;
-    padding: 4px 10px;
+    box-shadow: none;
   }
   .navbar-links {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: auto;
     background: #181c2a;
     flex-direction: column;
     align-items: flex-start;
@@ -805,6 +819,7 @@ img, .avatar-img {
     font-size: 1.1rem;
   }
   .navbar-links.open {
+    display: flex;
     transform: translateX(0);
   }
   .navbar-overlay {
@@ -854,5 +869,4 @@ img, .avatar-img {
     font-size: 1.08rem;
   }
 }
-
-/* --- FIN MENU BURGER MOBILE --- */ 
+/* --- FIN BURGER ICON STYLE --- */ 

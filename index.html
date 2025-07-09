@@ -19,7 +19,11 @@
   </div>
   <nav class="navbar">
     <div class="navbar-logo">sheygo</div>
-    <button class="navbar-burger" aria-label="Ouvrir le menu" tabindex="0">&#9776;</button>
+    <button class="navbar-burger" aria-label="Ouvrir le menu" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="navbar-links">
       <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
       <li><a href="#about" data-i18n="nav_about">À propos</a></li>
@@ -175,138 +179,138 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
-
-    const translations = {
-      fr: {
-        nav_home: "Accueil",
-        nav_about: "À propos",
-        nav_projects: "Projets",
-        nav_skills: "Compétences",
-        nav_experience: "Expérience",
-        nav_contact: "Contact",
-        hero_hello: "Bonjour, je suis <span class='hero-name'>Sheygo</span>",
-        hero_role: "Développeur JavaScript, HTML/CSS & Python",
-        hero_desc: "Je crée des outils et expériences digitales qui combinent automatisation, bots Discord, et développement web moderne.",
-        btn_projects: "Voir mes projets",
-        btn_contact: "Me contacter",
-        about_title: "À propos de moi",
-        about_text: "Développeur passionné par l'automatisation, les bots Discord et le web, j'aime concevoir des outils qui facilitent la vie des utilisateurs et des communautés. J'ai de l'expérience sur Discord, le web scraping, et l'intégration d'APIs variées. Toujours curieux, j'aime apprendre de nouvelles technos et relever des défis !",
-        projects_title: "Projets sélectionnés",
-        project1_title: "Syde",
-        project1_desc: "Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.",
-        project1_tech: "JavaScript (Node.js), discord.js",
-        btn_see_more: "Voir Plus",
-        project2_title: "Perkify (Plugin Minecraft)",
-        project2_desc: "Plugin Minecraft offrant un système d'atouts personnalisable, compatible multi-versions, interface intuitive, optimisé pour serveurs multijoueurs.",
-        project2_tech: "Java, Spigot/Bukkit API",
-        project3_title: "NewsGG",
-        project3_desc: "Bot multi-plateforme qui agrège et diffuse automatiquement les dernières actualités et promotions de jeux vidéo (Steam, Epic Games, etc.).",
-        project3_tech: "JavaScript, Node.js, APIs web, Discordz",
-        project4_title: "Thème Vencord",
-        project4_desc: "Thème personnalisé pour Discord via Vencord, design moderne, couleurs violettes et sombres, compatible mode nuit.",
-        project4_tech: "CSS, Vencord",
-        skills_title: "Compétences",
-        skill_js: "JavaScript",
-        skill_htmlcss: "HTML/CSS",
-        skill_python: "Python",
-        skill_node: "Node.js",
-        skill_discordjs: "discord.js",
-        skill_java: "Java",
-        skill_spigot: "Spigot",
-        skill_api: "APIs Web",
-        skill_git: "Git",
-        exp_title: "Expérience",
-        exp1_title: "Développeur Full Stack (Projet personnel)",
-        exp1_desc: "Développement de bots Discord, plugins Minecraft, et outils web pour divers serveurs et communautés.",
-        exp2_title: "Freelance - Développement de solutions sur mesure",
-        exp2_desc: "Création de bots, automatisations, et intégrations API pour des clients variés (Discord, web, jeux vidéo).",
-        contact_title: "Contact",
-        contact_discord: "Discord",
-        contact_location: "Localisation",
-        contact_country: "France",
-        contact_social: "Retrouvez-moi sur"
-      },
-      en: {
-        nav_home: "Home",
-        nav_about: "About",
-        nav_projects: "Projects",
-        nav_skills: "Skills",
-        nav_experience: "Experience",
-        nav_contact: "Contact",
-        hero_hello: "Hello, I'm <span class='hero-name'>Sheygo</span>",
-        hero_role: "JavaScript, HTML/CSS & Python Developer",
-        hero_desc: "I create digital tools and experiences combining automation, Discord bots, and modern web development.",
-        btn_projects: "See my projects",
-        btn_contact: "Contact me",
-        about_title: "About me",
-        about_text: "Passionate developer focused on automation, Discord bots, and the web. I love building tools that make life easier for users and communities. Experienced with Discord, web scraping, and various API integrations. Always curious, I enjoy learning new tech and taking on challenges!",
-        projects_title: "Selected projects",
-        project1_title: "Syde",
-        project1_desc: "Multi-purpose Discord bot: moderation, auto-announcements, counter system, MongoDB integration, and more.",
-        project1_tech: "JavaScript (Node.js), discord.js",
-        btn_see_more: "See more",
-        project2_title: "Perkify (Minecraft Plugin)",
-        project2_desc: "Minecraft plugin with customizable perks system, multi-version support, intuitive interface, optimized for multiplayer servers.",
-        project2_tech: "Java, Spigot/Bukkit API",
-        project3_title: "NewsGG",
-        project3_desc: "Multi-platform bot that aggregates and automatically shares the latest video game news and deals (Steam, Epic Games, etc.).",
-        project3_tech: "JavaScript, Node.js, Web APIs, Discordz",
-        project4_title: "Vencord Theme",
-        project4_desc: "Custom Discord theme via Vencord, modern design, purple/dark colors, night mode compatible.",
-        project4_tech: "CSS, Vencord",
-        skills_title: "Skills",
-        skill_js: "JavaScript",
-        skill_htmlcss: "HTML/CSS",
-        skill_python: "Python",
-        skill_node: "Node.js",
-        skill_discordjs: "discord.js",
-        skill_java: "Java",
-        skill_spigot: "Spigot",
-        skill_api: "Web APIs",
-        skill_git: "Git",
-        exp_title: "Experience",
-        exp1_title: "Full Stack Developer (Personal project)",
-        exp1_desc: "Development of Discord bots, Minecraft plugins, and web tools for various servers and communities.",
-        exp2_title: "Freelance - Custom solutions development",
-        exp2_desc: "Creation of bots, automations, and API integrations for various clients (Discord, web, video games).",
-        contact_title: "Contact",
-        contact_discord: "Discord",
-        contact_location: "Location",
-        contact_country: "France",
-        contact_social: "Find me on"
-      }
-    };
-    function updateLang(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') {
-            el.placeholder = translations[lang][key];
-          } else {
-            el.innerHTML = translations[lang][key];
-          }
+document.addEventListener('DOMContentLoaded', function() {
+  // Traductions FR/EN
+  const translations = {
+    fr: {
+      nav_home: "Accueil",
+      nav_about: "À propos",
+      nav_projects: "Projets",
+      nav_skills: "Compétences",
+      nav_experience: "Expérience",
+      nav_contact: "Contact",
+      hero_hello: "Bonjour, je suis <span class='hero-name'>Sheygo</span>",
+      hero_role: "Développeur JavaScript, HTML/CSS & Python",
+      hero_desc: "Je crée des outils et expériences digitales qui combinent automatisation, bots Discord, et développement web moderne.",
+      btn_projects: "Voir mes projets",
+      btn_contact: "Me contacter",
+      about_title: "À propos de moi",
+      about_text: "Développeur passionné par l'automatisation, les bots Discord et le web, j'aime concevoir des outils qui facilitent la vie des utilisateurs et des communautés. J'ai de l'expérience sur Discord, le web scraping, et l'intégration d'APIs variées. Toujours curieux, j'aime apprendre de nouvelles technos et relever des défis !",
+      projects_title: "Projets sélectionnés",
+      project1_title: "Syde",
+      project1_desc: "Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.",
+      project1_tech: "JavaScript (Node.js), discord.js",
+      btn_see_more: "Voir Plus",
+      project2_title: "Perkify (Plugin Minecraft)",
+      project2_desc: "Plugin Minecraft offrant un système d'atouts personnalisable, compatible multi-versions, interface intuitive, optimisé pour serveurs multijoueurs.",
+      project2_tech: "Java, Spigot/Bukkit API",
+      project3_title: "NewsGG",
+      project3_desc: "Bot multi-plateforme qui agrège et diffuse automatiquement les dernières actualités et promotions de jeux vidéo (Steam, Epic Games, etc.).",
+      project3_tech: "JavaScript, Node.js, APIs web, Discordz",
+      project4_title: "Thème Vencord",
+      project4_desc: "Thème personnalisé pour Discord via Vencord, design moderne, couleurs violettes et sombres, compatible mode nuit.",
+      project4_tech: "CSS, Vencord",
+      skills_title: "Compétences",
+      skill_js: "JavaScript",
+      skill_htmlcss: "HTML/CSS",
+      skill_python: "Python",
+      skill_node: "Node.js",
+      skill_discordjs: "discord.js",
+      skill_java: "Java",
+      skill_spigot: "Spigot",
+      skill_api: "APIs Web",
+      skill_git: "Git",
+      exp_title: "Expérience",
+      exp1_title: "Développeur Full Stack (Projet personnel)",
+      exp1_desc: "Développement de bots Discord, plugins Minecraft, et outils web pour divers serveurs et communautés.",
+      exp2_title: "Freelance - Développement de solutions sur mesure",
+      exp2_desc: "Création de bots, automatisations, et intégrations API pour des clients variés (Discord, web, jeux vidéo).",
+      contact_title: "Contact",
+      contact_discord: "Discord",
+      contact_location: "Localisation",
+      contact_country: "France",
+      contact_social: "Retrouvez-moi sur"
+    },
+    en: {
+      nav_home: "Home",
+      nav_about: "About",
+      nav_projects: "Projects",
+      nav_skills: "Skills",
+      nav_experience: "Experience",
+      nav_contact: "Contact",
+      hero_hello: "Hello, I'm <span class='hero-name'>Sheygo</span>",
+      hero_role: "JavaScript, HTML/CSS & Python Developer",
+      hero_desc: "I create digital tools and experiences combining automation, Discord bots, and modern web development.",
+      btn_projects: "See my projects",
+      btn_contact: "Contact me",
+      about_title: "About me",
+      about_text: "Passionate developer focused on automation, Discord bots, and the web. I love building tools that make life easier for users and communities. Experienced with Discord, web scraping, and various API integrations. Always curious, I enjoy learning new tech and taking on challenges!",
+      projects_title: "Selected projects",
+      project1_title: "Syde",
+      project1_desc: "Multi-purpose Discord bot: moderation, auto-announcements, counter system, MongoDB integration, and more.",
+      project1_tech: "JavaScript (Node.js), discord.js",
+      btn_see_more: "See more",
+      project2_title: "Perkify (Minecraft Plugin)",
+      project2_desc: "Minecraft plugin with customizable perks system, multi-version support, intuitive interface, optimized for multiplayer servers.",
+      project2_tech: "Java, Spigot/Bukkit API",
+      project3_title: "NewsGG",
+      project3_desc: "Multi-platform bot that aggregates and automatically shares the latest video game news and deals (Steam, Epic Games, etc.).",
+      project3_tech: "JavaScript, Node.js, Web APIs, Discordz",
+      project4_title: "Vencord Theme",
+      project4_desc: "Custom Discord theme via Vencord, modern design, purple/dark colors, night mode compatible.",
+      project4_tech: "CSS, Vencord",
+      skills_title: "Skills",
+      skill_js: "JavaScript",
+      skill_htmlcss: "HTML/CSS",
+      skill_python: "Python",
+      skill_node: "Node.js",
+      skill_discordjs: "discord.js",
+      skill_java: "Java",
+      skill_spigot: "Spigot",
+      skill_api: "Web APIs",
+      skill_git: "Git",
+      exp_title: "Experience",
+      exp1_title: "Full Stack Developer (Personal project)",
+      exp1_desc: "Development of Discord bots, Minecraft plugins, and web tools for various servers and communities.",
+      exp2_title: "Freelance - Custom solutions development",
+      exp2_desc: "Creation of bots, automations, and API integrations for various clients (Discord, web, video games).",
+      contact_title: "Contact",
+      contact_discord: "Discord",
+      contact_location: "Location",
+      contact_country: "France",
+      contact_social: "Find me on"
+    }
+  };
+  function updateLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') {
+          el.placeholder = translations[lang][key];
+        } else {
+          el.innerHTML = translations[lang][key];
         }
-      });
-    }
-    document.getElementById('lang-select').addEventListener('change', function(e) {
-      const lang = e.target.value;
-      updateLang(lang);
+      }
     });
+  }
+  document.getElementById('lang-select').addEventListener('change', function(e) {
+    const lang = e.target.value;
+    updateLang(lang);
+  });
+  updateLang('fr');
 
-    updateLang('fr');
+  // Menu burger mobile
+  const burger = document.querySelector('.navbar-burger');
+  const links = document.querySelector('.navbar-links');
+  const overlay = document.querySelector('.navbar-overlay');
 
-    // Menu burger mobile
-    const burger = document.querySelector('.navbar-burger');
-    const links = document.querySelector('.navbar-links');
-    const overlay = document.querySelector('.navbar-overlay');
+  function closeMenu() {
+    links.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
 
-    function closeMenu() {
-      links.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.classList.remove('no-scroll');
-    }
-
+  if (burger && links && overlay) {
     burger.addEventListener('click', function() {
       links.classList.toggle('open');
       overlay.classList.toggle('open');
@@ -314,6 +318,8 @@
     });
     overlay.addEventListener('click', closeMenu);
     window.addEventListener('resize', closeMenu);
+  }
+});
   </script>
 </body>
 </html> 
