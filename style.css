@@ -1064,3 +1064,22 @@ img, .avatar-img {
   }
 }
 /* --- FIN BURGER SMALLER --- */ 
+
+@media (min-width: 801px) {
+  .navbar-links {
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    transform: none;
+    padding: 0;
+  }
+  .navbar-links.open {
+    display: flex !important;
+  }
+  .navbar-overlay {
+    display: none !important;
+  }
+} 
