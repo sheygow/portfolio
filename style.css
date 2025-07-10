@@ -1167,22 +1167,6 @@ footer {
     margin-right: 0;
   }
 }
-
-.lang-corner {
-  position: static;
-  left: auto;
-  top: auto;
-  transform: none;
-  margin-left: auto;
-  margin-right: 16px;
-  z-index: 2;
-}
-@media (max-width: 800px) {
-  .lang-corner {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
     
 .lang-corner {
   margin-left: auto !important;
@@ -1459,4 +1443,106 @@ body.drawer-open {
 }
 .custom-lang-options {
   z-index: 2100 !important;
+} 
+
+@media (max-width: 600px) {
+  .projects-section .project-list {
+    gap: 10px;
+  }
+  .project-card {
+    padding: 10px 8px 8px 8px;
+    font-size: 0.92rem;
+  }
+  .project-card h3 {
+    font-size: 1.02rem;
+  }
+  .project-tech {
+    font-size: 0.85rem;
+  }
+  .skills-section .skills-list span {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+  .experience-card {
+    padding: 10px 10px;
+    font-size: 0.92rem;
+  }
+  .exp-date {
+    font-size: 0.82rem;
+  }
+  .contact-card {
+    padding: 10px 10px;
+    min-width: 0;
+    min-height: 40px;
+    gap: 8px;
+  }
+  .contact-label {
+    font-size: 0.92rem;
+  }
+  .contact-value {
+    font-size: 0.85rem;
+  }
+  .contact-social-label {
+    font-size: 0.92rem;
+  }
+  footer {
+    font-size: 0.92rem;
+    height: 38px;
+    line-height: 38px;
+  }
+} 
+
+@media (max-width: 600px) {
+  section, header, main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section h2 {
+    font-size: 1.25rem;
+  }
+  .about-section p,
+  .projects-section p,
+  .skills-section .skills-list span,
+  .experience-section p,
+  .experience-card,
+  .contact-section p {
+    font-size: 0.92rem;
+  }
+} 
+
+@media (max-width: 800px) and (min-width: 601px) {
+  section, header, main {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  section h2 {
+    font-size: 1.45rem;
+  }
+  .about-section p,
+  .projects-section p,
+  .skills-section .skills-list span,
+  .experience-section p,
+  .experience-card,
+  .contact-section p {
+    font-size: 1rem;
+  }
+} 
+
+html, body {
+  overflow-x: hidden;
+}
+section, main, header, .project-card, .experience-card, .contact-card {
+  box-sizing: border-box !important;
+}
+@media (max-width: 800px) {
+  section, header, main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 600px) {
+  section, header, main {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 } 
