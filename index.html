@@ -12,18 +12,6 @@
 <body>
   <nav class="navbar">
     <div class="navbar-logo">sheygo</div>
-    <div class="lang-corner">
-      <span class="lang-icon">🌐</span>
-      <select id="lang-select">
-        <option value="fr">FR</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
-    <button class="navbar-burger" aria-label="Ouvrir le menu" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
     <ul class="navbar-links">
       <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
       <li><a href="#about" data-i18n="nav_about">À propos</a></li>
@@ -32,6 +20,15 @@
       <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
       <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
+    <div class="lang-corner">
+      <div class="custom-lang-select" tabindex="0">
+        <span class="custom-lang-selected">FR</span>
+        <div class="custom-lang-options">
+          <div class="custom-lang-option" data-value="fr">FR</div>
+          <div class="custom-lang-option" data-value="en">EN</div>
+        </div>
+      </div>
+    </div>
   </nav>
   <div class="navbar-overlay"></div>
   <header id="home" class="hero-section">
@@ -95,7 +92,7 @@
           <h3 data-i18n="project1_title">Syde</h3>
           <p data-i18n="project1_desc">Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.</p>
           <span class="project-tech" data-i18n="project1_tech">JavaScript (Node.js), discord.js</span>
-          <a href="https://sheygo.gitbook.io/documentation" target="_blank" class="voir-plus-btn" style="position: absolute; right: 18px; bottom: 18px; padding: 7px 18px; background: linear-gradient(90deg, #6c63ff 0%, #a084ee 100%); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.98rem; transition: background 0.2s;" data-i18n="btn_see_more">Voir Plus</a>
+          <a href="https://sheygo.gitbook.io/documentation" target="_blank" class="voir-plus-btn" data-i18n="btn_see_more">Voir Plus</a>
         </div>
         <div class="project-card">
           <h3 data-i18n="project2_title">Perkify (Plugin Minecraft)</h3>
@@ -293,11 +290,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  document.getElementById('lang-select').addEventListener('change', function(e) {
-    const lang = e.target.value;
-    updateLang(lang);
-  });
-  updateLang('fr');
+  // SUPPRESSION DU CODE CI-DESSOUS :
+  // document.getElementById('lang-select').addEventListener('change', function(e) {
+  //   const lang = e.target.value;
+  //   updateLang(lang);
+  // });
+  // updateLang('fr');
 
   // Menu burger mobile
   const burger = document.querySelector('.navbar-burger');
@@ -319,6 +317,33 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', closeMenu);
     window.addEventListener('resize', closeMenu);
   }
+
+  // Dropdown custom langue
+  const langSelect = document.querySelector('.custom-lang-select');
+  const langSelected = document.querySelector('.custom-lang-selected');
+  const langOptions = document.querySelector('.custom-lang-options');
+  const langOptionItems = document.querySelectorAll('.custom-lang-option');
+
+  langSelect.addEventListener('click', function(e) {
+    langOptions.classList.toggle('open');
+  });
+  langOptionItems.forEach(opt => {
+    opt.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langSelected.textContent = this.textContent;
+      langOptions.classList.remove('open');
+      langOptionItems.forEach(o => o.classList.remove('selected'));
+      this.classList.add('selected');
+      // Ajout de la traduction automatique
+      if (this.dataset.value === 'en') updateLang('en');
+      else updateLang('fr');
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (!langSelect.contains(e.target)) {
+      langOptions.classList.remove('open');
+    }
+  });
 });
   </script>
 </body>

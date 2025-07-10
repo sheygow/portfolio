@@ -22,13 +22,16 @@ body {
   z-index: 10;
   box-shadow: 0 2px 8px #181c2a33;
   position: relative;
+  overflow: unset !important;
+  padding-right: 36px !important;
 }
 .navbar-logo {
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 2px;
   color: #a084ee;
-  margin-right: 40px;
+  margin-left: 8px !important;
+  margin-right: 32px !important;
 }
 .navbar-links {
   display: flex;
@@ -50,10 +53,9 @@ body {
 
 /* Sélecteur de langue dans le coin */
 .lang-corner {
-  position: fixed;
-  top: 16px;
-  right: 38px;
-  z-index: 1000;
+  position: static !important;
+  margin-left: 24px !important;
+  margin-right: 0 !important;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -62,35 +64,45 @@ body {
   box-shadow: none;
   padding: 0;
 }
-.lang-corner .lang-icon {
-  font-size: 1.18rem;
-  color: #6cdbff;
-  display: flex;
-  align-items: center;
-}
 #lang-select {
-  background: #232946;
-  color: #e0e1f6;
-  border: 1.5px solid #a084ee;
-  border-radius: 7px;
-  padding: 4px 16px 4px 10px;
-  font-size: 1rem;
-  font-weight: 700;
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 50%, #6c63ff 100%);
+  background-size: 200% 200%;
+  background-position: top left;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
   outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 4px #6c63ff11;
+  transition: background-position 0.3s cubic-bezier(.6,0,.6,1), box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 0 16px #a084ee44;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#lang-select option {
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+#lang-select option:checked, #lang-select option:hover {
+  background: #a084ee;
+  color: #fff;
 }
 #lang-select:focus, #lang-select:hover {
-  border: 1.5px solid #6c63ff;
-  box-shadow: 0 0 0 1.5px #a084ee44;
+  background-position: bottom right;
+  color: #fff;
+  box-shadow: 0 0 24px #a084ee99;
 }
 
 .hero-section {
   background: linear-gradient(120deg, #232946 60%, #6c63ff 100%);
   color: #fff;
   padding: 64px 0 48px 0;
-  min-height: 420px;
+  margin-top: 0 !important;
 }
 .hero-content {
   max-width: 1100px;
@@ -112,7 +124,7 @@ body {
   font-size: 2.7rem;
 }
 .hero-role {
-  color: #6c63ff;
+  color: #e0e1f6;
   font-size: 1.3rem;
   margin-top: 8px;
   margin-bottom: 18px;
@@ -128,6 +140,8 @@ body {
 }
 .btn-main {
   background: linear-gradient(90deg, #6c63ff 0%, #a084ee 100%);
+  background-size: 200% 100%;
+  background-position: left center;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -137,10 +151,11 @@ body {
   cursor: pointer;
   box-shadow: 0 0 16px #a084ee44;
   text-decoration: none;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background-position 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.2s, color 0.2s;
 }
-.btn-main:hover {
-  background: linear-gradient(90deg, #a084ee 0%, #6c63ff 100%);
+.btn-main:hover, .btn-main:focus {
+  background-position: right center;
+  color: #fff;
   box-shadow: 0 0 24px #a084ee99;
 }
 .btn-outline {
@@ -192,7 +207,8 @@ body {
 .code-str { color: #f3c7ff; }
 
 section {
-  max-width: 900px;
+  width: 100%;
+  max-width: 950px;
   margin: 0 auto 64px auto;
   padding: 0 24px;
 }
@@ -269,6 +285,16 @@ section h2 {
   font-size: 1.05rem;
   font-weight: 500;
   box-shadow: 0 2px 8px #6c63ff11;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1) !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+.skills-section .skills-list span:hover,
+.skills-section .skills-list span:focus,
+.skills-section .skills-list span:active {
+  transform: scale(1.08);
+  z-index: 2;
+  box-shadow: 0 6px 24px #a084ee55, 0 2px 8px #6c63ff22;
 }
 .experience-list {
   display: flex;
@@ -362,12 +388,16 @@ section h2 {
   transition: filter 0.2s, transform 0.2s;
 }
 footer {
-  background: transparent;
-  color: #6c63ff;
+  background: #181c2a;
+  color: #a084ee;
   text-align: center;
-  padding: 18px 0 8px 0;
-  font-size: 1rem;
+  padding: 0;
+  font-size: 1.25rem;
   border-top: 1px solid #2d3250;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .hero-content {
@@ -1082,4 +1112,255 @@ img, .avatar-img {
   .navbar-overlay {
     display: none !important;
   }
+} 
+
+/* --- SUPPRESSION TOTALE DES ANIMATIONS ET TRANSITIONS --- */
+
+/* 2. Footer/barre noire du bas plus grande */
+footer {
+  background: #181c2a;
+  color: #a084ee;
+  text-align: center;
+  padding: 0;
+  font-size: 1.25rem;
+  border-top: 1px solid #2d3250;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+/* 3. Navbar plus haute */
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 60px;
+}
+
+/* 4. Centrer le sélecteur de langue dans la navbar sur desktop */
+@media (min-width: 801px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .lang-corner {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}
+/* --- FIN RESTAURATION ET AJUSTEMENTS --- */ 
+
+/* --- CENTRAGE ABSOLU DU SELECTEUR DE LANGUE --- */
+.navbar {
+  position: relative;
+}
+.lang-corner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 2;
+}
+@media (max-width: 800px) {
+  .lang-corner {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* --- FIN CENTRAGE ABSOLU --- */ 
+
+/* --- LANGUE À DROITE DANS LA NAVBAR --- */
+.lang-corner {
+  position: static;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin-left: auto;
+  margin-right: 16px;
+  z-index: 2;
+}
+@media (max-width: 800px) {
+  .lang-corner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* --- FIN LANGUE À DROITE --- */ 
+
+.lang-corner {
+  margin-left: auto !important;
+  margin-right: 50px !important;
+} 
+
+/*
+* {
+  transition: none !important;
+  animation: none !important;
+}
+*/ 
+
+/* --- DEBUG : Forcer affichage du contenu et du menu --- */
+.navbar-links,
+.navbar-links.open {
+  display: flex !important;
+  position: static !important;
+  height: auto !important;
+  width: auto !important;
+  background: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  padding: 0 !important;
+  z-index: auto !important;
+}
+.navbar-overlay,
+.navbar-overlay.open {
+  display: none !important;
+}
+body,
+main,
+section,
+header {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+/* --- FIN DEBUG --- */ 
+
+footer {
+  height: 100px !important;
+  line-height: 100px !important;
+  font-size: 1.4rem !important;
+} 
+
+.project-card, .experience-card {
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1) !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+.project-card:hover, .project-card:focus, .project-card:active,
+.experience-card:hover, .experience-card:focus, .experience-card:active {
+  transform: scale(1.04);
+  z-index: 2;
+  box-shadow: 0 6px 32px #a084ee55, 0 2px 12px #6c63ff22;
+} 
+
+.voir-plus-btn {
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 50%, #6c63ff 100%);
+  background-size: 200% 200%;
+  background-position: top left;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-position 0.3s cubic-bezier(.6,0,.6,1), box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 0 16px #a084ee44;
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+}
+.voir-plus-btn:hover, .voir-plus-btn:focus {
+  background-position: bottom right;
+  color: #fff;
+  box-shadow: 0 0 24px #a084ee99;
+} 
+
+.btn-main {
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 50%, #6c63ff 100%);
+  background-size: 200% 200%;
+  background-position: top left;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 16px #a084ee44;
+  text-decoration: none;
+  transition: background-position 0.3s cubic-bezier(.6,0,.6,1), box-shadow 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.btn-main:hover, .btn-main:focus {
+  background-position: bottom right;
+  color: #fff;
+  box-shadow: 0 0 24px #a084ee99;
+} 
+
+.custom-lang-select {
+  position: relative;
+  min-width: 54px;
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 60%, #6c63ff 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 0 16px #a084ee44;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-lang-select.open, .custom-lang-select:focus {
+  box-shadow: 0 0 24px #a084ee99;
+}
+.custom-lang-selected {
+  pointer-events: none;
+}
+.custom-lang-options {
+  display: none !important;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #6c63ff 0%, #a084ee 100%);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px #a084ee55;
+  z-index: 10;
+  overflow: hidden;
+  animation: fadeIn 0.18s;
+  border: 1.5px solid #181c2a;
+}
+.custom-lang-options.open {
+  display: block !important;
+}
+.custom-lang-option {
+  padding: 8px 0;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  border-bottom: 1px solid #181c2a;
+}
+.custom-lang-option:last-child {
+  border-bottom: none;
+}
+.custom-lang-option:hover, .custom-lang-option.selected {
+  background: #6c63ff;
+  color: #fff;
 } 
