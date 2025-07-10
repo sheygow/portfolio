@@ -179,6 +179,18 @@
     </section>
   </main>
 
+  <div class="drawer-overlay"></div>
+  <nav class="drawer-menu">
+    <ul>
+      <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+      <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -334,6 +346,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!langSelect.contains(e.target)) {
       langOptions.classList.remove('open');
     }
+  });
+
+  // Drawer menu mobile
+  const burgerBtn = document.querySelector('.navbar-burger');
+  const drawer = document.querySelector('.drawer-menu');
+  const drawerOverlay = document.querySelector('.drawer-overlay');
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    drawerOverlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
+  burgerBtn.addEventListener('click', function(e) {
+    if (drawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      drawer.classList.add('open');
+      drawerOverlay.classList.add('open');
+      document.body.classList.add('no-scroll');
+    }
+  });
+  drawerOverlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeDrawer);
   });
 });
   </script>

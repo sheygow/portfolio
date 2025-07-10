@@ -1224,18 +1224,6 @@ footer {
 */ 
 
 /* --- DEBUG : Forcer affichage du contenu et du menu --- */
-.navbar-links,
-.navbar-links.open {
-  display: flex !important;
-  position: static !important;
-  height: auto !important;
-  width: auto !important;
-  background: none !important;
-  box-shadow: none !important;
-  transform: none !important;
-  padding: 0 !important;
-  z-index: auto !important;
-}
 .navbar-overlay,
 .navbar-overlay.open {
   display: none !important;
@@ -1443,6 +1431,21 @@ footer {
   display: block;
   opacity: 1;
 }
+
+/* Animation de la page principale */
+body {
+  transition: none;
+}
+body.drawer-open {
+  transform: none;
+  max-width: none;
+}
+@media (min-width: 801px) {
+  body.drawer-open {
+    transform: none;
+    max-width: none;
+  }
+}
 .drawer-menu {
   position: fixed;
   top: 0; left: 0;
@@ -1464,7 +1467,7 @@ footer {
 }
 .drawer-menu ul {
   list-style: none;
-  padding: 0 0 0 32px;
+  padding: 32px 0 0 32px;
   margin: 0;
   width: 100%;
 }
