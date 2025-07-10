@@ -51,7 +51,6 @@ body {
   color: #a084ee;
 }
 
-/* Sélecteur de langue dans le coin */
 .lang-corner {
   position: static !important;
   margin-left: 24px !important;
@@ -791,10 +790,6 @@ img, .avatar-img {
   }
 }
 
-/* --- FIN OPTIMISATION RESPONSIVE --- */ 
-
-/* --- AJUSTEMENTS MOBILE : ZOOM OUT & NAVBAR FIX --- */
-
 @media (max-width: 600px) {
   body {
     font-size: 0.95rem;
@@ -816,7 +811,7 @@ img, .avatar-img {
     margin-bottom: 2px;
   }
   .hero-section {
-    margin-top: 60px; /* Compense la navbar fixed */
+    margin-top: 60px; 
   }
 }
 
@@ -838,11 +833,6 @@ img, .avatar-img {
   }
 }
 
-/* --- FIN AJUSTEMENTS MOBILE --- */ 
-
-/* --- MENU BURGER MOBILE --- */
-
-/* --- BURGER ICON STYLE --- */
 .navbar-burger {
   display: none;
   background: none;
@@ -947,9 +937,7 @@ img, .avatar-img {
     font-size: 1.08rem;
   }
 }
-/* --- FIN BURGER ICON STYLE --- */ 
 
-/* --- NAVBAR ALIGNEMENT --- */
 .navbar {
   display: flex;
   align-items: center;
@@ -1022,9 +1010,7 @@ img, .avatar-img {
     padding: 1px 7px 1px 6px;
   }
 }
-/* --- FIN NAVBAR ALIGNEMENT --- */ 
 
-/* --- NAVBAR FLEX FIX --- */
 .navbar {
   display: flex;
   align-items: center;
@@ -1079,9 +1065,7 @@ img, .avatar-img {
     width: 36px;
   }
 }
-/* --- FIN NAVBAR FLEX FIX --- */ 
 
-/* --- BURGER SMALLER --- */
 .navbar-burger {
   height: 28px;
   width: 28px;
@@ -1105,7 +1089,6 @@ img, .avatar-img {
     margin-right: 8px;
   }
 }
-/* --- FIN BURGER SMALLER --- */ 
 
 @media (min-width: 801px) {
   .navbar-links {
@@ -1126,9 +1109,6 @@ img, .avatar-img {
   }
 } 
 
-/* --- SUPPRESSION TOTALE DES ANIMATIONS ET TRANSITIONS --- */
-
-/* 2. Footer/barre noire du bas plus grande */
 footer {
   background: #181c2a;
   color: #a084ee;
@@ -1142,14 +1122,12 @@ footer {
   width: 100%;
 }
 
-/* 3. Navbar plus haute */
 .navbar {
   padding-top: 10px;
   padding-bottom: 10px;
   min-height: 60px;
 }
 
-/* 4. Centrer le sélecteur de langue dans la navbar sur desktop */
 @media (min-width: 801px) {
   .navbar {
     display: flex;
@@ -1167,9 +1145,7 @@ footer {
     right: 0;
   }
 }
-/* --- FIN RESTAURATION ET AJUSTEMENTS --- */ 
 
-/* --- CENTRAGE ABSOLU DU SELECTEUR DE LANGUE --- */
 .navbar {
   position: relative;
 }
@@ -1191,9 +1167,7 @@ footer {
     margin-right: 0;
   }
 }
-/* --- FIN CENTRAGE ABSOLU --- */ 
 
-/* --- LANGUE À DROITE DANS LA NAVBAR --- */
 .lang-corner {
   position: static;
   left: auto;
@@ -1209,21 +1183,12 @@ footer {
     margin-right: 0;
   }
 }
-/* --- FIN LANGUE À DROITE --- */ 
-
+    
 .lang-corner {
   margin-left: auto !important;
   margin-right: 50px !important;
 } 
 
-/*
-* {
-  transition: none !important;
-  animation: none !important;
-}
-*/ 
-
-/* --- DEBUG : Forcer affichage du contenu et du menu --- */
 .navbar-overlay,
 .navbar-overlay.open {
   display: none !important;
@@ -1240,7 +1205,6 @@ header {
   min-height: 0 !important;
   max-height: none !important;
 }
-/* --- FIN DEBUG --- */ 
 
 footer {
   height: 100px !important;
@@ -1432,7 +1396,6 @@ footer {
   opacity: 1;
 }
 
-/* Animation de la page principale */
 body {
   transition: none;
 }
@@ -1447,6 +1410,7 @@ body.drawer-open {
   }
 }
 .drawer-menu {
+  display: none;
   position: fixed;
   top: 0; left: 0;
   height: 100vh;
@@ -1457,33 +1421,13 @@ body.drawer-open {
   z-index: 120;
   transform: translateX(-100%);
   transition: transform 0.28s cubic-bezier(.4,0,.2,1);
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 48px 0 0 0;
 }
 .drawer-menu.open {
+  display: flex;
   transform: translateX(0);
-}
-.drawer-menu ul {
-  list-style: none;
-  padding: 32px 0 0 32px;
-  margin: 0;
-  width: 100%;
-}
-.drawer-menu li {
-  margin-bottom: 28px;
-}
-.drawer-menu a {
-  color: #fff;
-  font-size: 1.18rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.18s;
-  display: block;
-}
-.drawer-menu a:hover {
-  color: #a084ee;
 }
 @media (min-width: 801px) {
   .drawer-menu, .drawer-overlay {

@@ -194,7 +194,7 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Traductions FR/EN
+
   const translations = {
     fr: {
       nav_home: "Accueil",
@@ -307,21 +307,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  // SUPPRESSION DU CODE CI-DESSOUS :
-  // document.getElementById('lang-select').addEventListener('change', function(e) {
-  //   const lang = e.target.value;
-  //   updateLang(lang);
-  // });
-  // updateLang('fr');
 
-  // Burger classique mobile
   const burger = document.querySelector('.navbar-burger');
   const links = document.querySelector('.navbar-links');
   burger.addEventListener('click', function() {
     links.classList.toggle('open');
   });
 
-  // Dropdown custom langue
+
   const langSelect = document.querySelector('.custom-lang-select');
   const langSelected = document.querySelector('.custom-lang-selected');
   const langOptions = document.querySelector('.custom-lang-options');
@@ -337,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
       langOptions.classList.remove('open');
       langOptionItems.forEach(o => o.classList.remove('selected'));
       this.classList.add('selected');
-      // Ajout de la traduction automatique
+
       if (this.dataset.value === 'en') updateLang('en');
       else updateLang('fr');
     });
@@ -348,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Drawer menu mobile
+
   const burgerBtn = document.querySelector('.navbar-burger');
   const drawer = document.querySelector('.drawer-menu');
   const drawerOverlay = document.querySelector('.drawer-overlay');
