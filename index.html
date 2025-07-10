@@ -302,26 +302,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // });
   // updateLang('fr');
 
-  // Menu burger mobile
+  // Burger classique mobile
   const burger = document.querySelector('.navbar-burger');
   const links = document.querySelector('.navbar-links');
-  const overlay = document.querySelector('.navbar-overlay');
-
-  function closeMenu() {
-    links.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.classList.remove('no-scroll');
-  }
-
-  if (burger && links && overlay) {
-    burger.addEventListener('click', function() {
-      links.classList.toggle('open');
-      overlay.classList.toggle('open');
-      document.body.classList.toggle('no-scroll');
-    });
-    overlay.addEventListener('click', closeMenu);
-    window.addEventListener('resize', closeMenu);
-  }
+  burger.addEventListener('click', function() {
+    links.classList.toggle('open');
+  });
 
   // Dropdown custom langue
   const langSelect = document.querySelector('.custom-lang-select');
