@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="avatar-foot.png">
 
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <nav class="navbar">
@@ -98,22 +99,34 @@
       <h2 data-i18n="projects_title">Projets sélectionnés</h2>
       <div class="project-list">
         <div class="project-card" style="position: relative;">
+          <div class="project-icon">
+            <img src="discord-icon.png" alt="Discord" style="width: 24px; height: 24px;">
+          </div>
           <h3 data-i18n="project1_title">Syde</h3>
-          <p data-i18n="project1_desc">Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.</p>
+          <p data-i18n="project1_desc">Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.</p>
           <span class="project-tech" data-i18n="project1_tech">JavaScript (Node.js), discord.js</span>
           <a href="https://sheygo.gitbook.io/documentation" target="_blank" class="voir-plus-btn" data-i18n="btn_see_more">Voir Plus</a>
         </div>
         <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-cube"></i>
+          </div>
           <h3 data-i18n="project2_title">Perkify (Plugin Minecraft)</h3>
           <p data-i18n="project2_desc">Plugin Minecraft offrant un système d'atouts personnalisable, compatible multi-versions, interface intuitive, optimisé pour serveurs multijoueurs.</p>
           <span class="project-tech" data-i18n="project2_tech">Java, Spigot/Bukkit API</span>
         </div>
         <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-newspaper"></i>
+          </div>
           <h3 data-i18n="project3_title">NewsGG</h3>
           <p data-i18n="project3_desc">Bot multi-plateforme qui agrège et diffuse automatiquement les dernières actualités et promotions de jeux vidéo (Steam, Epic Games, etc.).</p>
           <span class="project-tech" data-i18n="project3_tech">JavaScript, Node.js, APIs web, Discordz</span>
         </div>
         <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-palette"></i>
+          </div>
           <h3 data-i18n="project4_title">Thème Vencord</h3>
           <p data-i18n="project4_desc">Thème personnalisé pour Discord via Vencord, design moderne, couleurs violettes et sombres, compatible mode nuit.</p>
           <span class="project-tech" data-i18n="project4_tech">CSS, Vencord</span>
@@ -264,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
       about_text: "Développeur passionné par l'automatisation, les bots Discord et le web, j'aime concevoir des outils qui facilitent la vie des utilisateurs et des communautés. J'ai de l'expérience sur Discord, le web scraping, et l'intégration d'APIs variées. Toujours curieux, j'aime apprendre de nouvelles technos et relever des défis !",
       projects_title: "Projets sélectionnés",
       project1_title: "Syde",
-      project1_desc: "Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.",
+      project1_desc: "Bot Discord multifonctions : modération, annonces automatiques, système de compteur, intégration MongoDB, et bien plus.",
       project1_tech: "JavaScript (Node.js), discord.js",
       btn_see_more: "Voir Plus",
       project2_title: "Perkify (Plugin Minecraft)",
@@ -444,4 +457,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
   </script>
 </body>
-</html> 
+</html>
