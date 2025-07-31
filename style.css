@@ -340,9 +340,6 @@ section h2 {
   background: #181c2a;
   border-radius: 12px;
 }
-.contact-icon img {
-  display: block;
-}
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -396,8 +393,8 @@ footer {
   padding: 0;
   font-size: 1.25rem;
   border-top: 1px solid #2d3250;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   position: relative;
   width: 100%;
 }
@@ -407,10 +404,10 @@ footer {
     gap: 32px;
     text-align: center;
   }
-  .navbar-links {
-    flex-direction: column;
+  .hero-right {
+    align-items: center;
   }
-  .project-list {
+  .projects-section .project-list {
     grid-template-columns: 1fr;
   }
   section {
@@ -1120,8 +1117,8 @@ footer {
   padding: 0;
   font-size: 1.25rem;
   border-top: 1px solid #2d3250;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   position: relative;
   width: 100%;
 }
@@ -1684,40 +1681,3 @@ section, main, header, .project-card, .experience-card, .contact-card {
   color: #fff;
   border-color: #a084ee;
 } 
-
-.project-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #a084ee, #8b5cf6);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  transition: all 0.3s ease;
-}
-
-.project-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(160, 132, 238, 0.4);
-}
-
-.project-icon i {
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
-.project-icon img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.project-card:hover .project-icon {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(160, 132, 238, 0.4);
-}
-.project-card:hover .project-icon {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(160, 132, 238, 0.4);
-}
